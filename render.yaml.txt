@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wechat-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: WECHAT_TOKEN
+        value: KLNYoW5n82nvGses
+      - key: WECHAT_AES_KEY
+        value: X2OWIThYpZgN9GFlzGGJajeCjpAjKHSy46wAhKexwo1
+      - key: WECHAT_CORP_ID
+        value: ww884de2b08569698c
